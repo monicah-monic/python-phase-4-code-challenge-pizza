@@ -77,7 +77,7 @@ class Pizzas(Resource):
             db.session.commit()
             return make_response(pizza.to_dict(), 201)
         except Exception as e:
-            print {e}
+            print ({e})
             return make_response({'error': str(e)}, 500)
            
 api.add_resource(Pizzas, '/pizza')
